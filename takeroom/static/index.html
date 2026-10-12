@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Takeroom — Studio Console</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<!-- Status & Visualizer Top Header -->
+<header class="status" id="status">
+  <div class="brand-badge">
+    <span class="logo-icon">🎛️</span>
+    <span class="logo-text">TAKEROOM</span>
+  </div>
+
+  <div class="status-item"><i class="lamp" id="lamp-gen"></i><b id="gen-name">generator</b></div>
+  <div class="status-item"><i class="lamp" id="lamp-writer"></i>writer</div>
+  <div class="status-item"><i class="lamp" id="lamp-stems"></i>stems</div>
+  <div class="status-item"><i class="lamp" id="lamp-midi"></i>midi</div>
+
+  <!-- Real-Time Spectrum & Peak VU Meter Canvas -->
+  <div class="visualizer-container" title="Live Audio Output Spectrum & Peak Meter">
+    <canvas id="visualizer-canvas" width="220" height="26"></canvas>
+  </div>
+
+  <span class="spacer"></span>
+  <span class="value badge" id="queue">queue 0</span>
+  <span class="value badge" id="loudness">-11.0 LUFS</span>
+</header>
+
+<div class="shell">
+
+  <!-- Control Desk Panel -->
+  <section class="desk">
+    <div id="notice"></div>
+
+    <div class="panel-header">
+      <h2>CONTROLS</h2>
+      <span class="panel-subtitle">Session Input & Expansion</span>
+    </div>
+
+    <div class="field">
+      <label for="brief">Brief <span class="hint">core musical idea</span></label>
+      <textarea id="brief" rows="3" placeholder="Late-night synth drive, minor key, tired but hopeful energy"></textarea>
+    </div>
+
+    <div class="field">
+      <div class="label-row">
+        <label for="style">Style prompt <span class="hint">written for you if blank</span></label>
+      </div>
+      <textarea id="style" rows="3" placeholder="synthwave, 96 bpm, A minor, analogue pads, gated snare, moody atmosphere…"></textarea>
+      
+      <!-- Quick Tag Builder Chips -->
+      <div class="tag-chips-container">
+        <span class="tag-chip-label">Quick Tags:</span>
+        <button type="button" class="tag-chip" data-tag="synthwave">Synthwave</button>
+        <button type="button" class="tag-chip" data-tag="lo-fi hip hop">Lo-Fi</button>
+        <button type="button" class="tag-chip" data-tag="cinematic orchestral">Cinematic</button>
+        <button type="button" class="tag-chip" data-tag="acoustic folk">Acoustic</button>
+        <button type="button" class="tag-chip" data-tag="96 bpm">96 BPM</button>
+        <button type="button" class="tag-chip" data-tag="A minor">A Minor</button>
+        <button type="button" class="tag-chip" data-tag="analogue pads">Analogue Pads</button>
+        <button type="button" class="tag-chip" data-tag="gated snare">Gated Snare</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="label-row">
+        <label for="lyrics">Lyrics <span class="hint">[verse] [chorus] structure tags</span></label>
+      </div>
+      <textarea id="lyrics" class="lyrics" placeholder="[verse]&#10;City lights in the mirror glow&#10;Miles to go before I reach home&#10;&#10;[chorus]&#10;Running through the midnight rain…"></textarea>
+    </div>
+
+    <div class="field">
+      <label class="check">
+        <input type="checkbox" id="instrumental">
+        <span class="check-custom"></span>
+        Instrumental (no lyrics)
+      </label>
+    </div>
+
+    <div class="field">
+      <label for="duration">Length <span class="slider-value" id="duration-value">2:00</span></label>
+      <input type="range" id="duration" min="30" max="300" step="10" value="120">
+    </div>
+
+    <div class="field row-3 row">
+      <div>
+        <label for="takes-count">Takes</label>
+        <input type="number" id="takes-count" min="1" max="4" value="2">
+      </div>
+      <div>
+        <label for="steps">Steps</label>
+        <input type="number" id="steps" min="4" max="120" value="24">
+      </div>
+      <div>
+        <label for="guidance">Guidance</label>
+        <input type="number" id="guidance" min="0.5" max="20" step="0.5" value="7">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="seed">Seed <span class="hint">blank for random</span></label>
+      <input type="text" id="seed" inputmode="numeric" placeholder="e.g. 88421037">
+    </div>
+
+    <div class="field action-group">
+      <button class="primary" id="generate">
+        <span class="btn-icon">⚡</span> Generate Takes
+      </button>
+      <button class="ghost" id="draft">
+        <span class="btn-icon">✍️</span> Draft Words Only
+      </button>
+    </div>
+
+    <!-- Shortcuts Helper Bar -->
+    <div class="shortcuts-bar">
+      <span><kbd>Space</kbd> Play/Pause</span>
+      <span><kbd>⌘↵</kbd> Generate</span>
+      <span><kbd>Esc</kbd> Stop</span>
+    </div>
+  </section>
+
+  <!-- Takes Library Section -->
+  <section class="takes-section">
+    <div class="library-header">
+      <div class="library-title-group">
+        <h2>SESSION TAKES</h2>
+        <span class="take-counter-badge" id="take-count-badge">0 takes</span>
+      </div>
+
+      <div class="library-filter-bar">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Filter takes by title, brief or prompt..." autocomplete="off">
+        </div>
+        <div class="filter-tabs">
+          <button type="button" class="filter-btn active" id="filter-all" data-filter="all">All</button>
+          <button type="button" class="filter-btn" id="filter-kept" data-filter="kept">⭐ Kept Only</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="takes" id="takes">
+      <div class="empty">
+        <div class="empty-icon">🎵</div>
+        <h3>No session takes yet</h3>
+        <p>Write a brief and hit <strong>Generate Takes</strong>. Leave style prompt and lyrics blank and the local model will draft them first.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="/static/app.js"></script>
+  <script src="/static/midi.js"></script>
+  <script src="/static/prompts.js"></script>
+  <script src="/static/stems.js"></script>
+</body>
+</html>

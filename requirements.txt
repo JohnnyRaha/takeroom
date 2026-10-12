@@ -1,0 +1,10 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+httpx>=0.27
+pydantic>=2.7
+numpy>=1.26
+soundfile>=0.12
+pyloudnorm>=0.1.1
+# optional but recommended:
+#   soxr      — proper sample-rate conversion
+#   demucs    — stem separation

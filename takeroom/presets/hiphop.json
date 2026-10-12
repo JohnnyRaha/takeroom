@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "name": "Hip-hop drums and instruments",
+  "note": "Written for ACE-Step 1.5, which wants dense comma-separated tags rather than sentences. Every preset is instrumental. Durations are longer than the loop you want on purpose — see the guide.",
+  "categories": [
+    {
+      "id": "drums-boom-bap",
+      "name": "Boom bap drums",
+      "note": "Swung sixteenths, 12-bit sampler crunch, room on the snare. Isolate the drums stem afterwards; ACE-Step nearly always adds a bassline you didn't ask for.",
+      "presets": [
+        {
+          "id": "bb-dusty-break",
+          "name": "Dusty break",
+          "prompt": "boom bap hip hop drum break, 92 bpm, dusty sampled acoustic kit, SP-1200 12-bit crunch, tight muffled kick, cracking rimshot snare with short room, swung sixteenth hi-hats, vinyl crackle, drums only, no melody, narrow dry mix",
+          "bpm": 92,
+          "duration": 60,
+          "workflow": "isolate drums, slice 2 bars"
+        },
+        {
+          "id": "bb-hard-90s",
+          "name": "Hard 90s New York",
+          "prompt": "east coast boom bap drums, 90 bpm, hard compressed break, thick punchy kick, loud snappy snare, closed hats on eighths, sampled from 1970s funk record, MPC60 swing, gritty saturated drums, no instruments",
+          "bpm": 90,
+          "duration": 60,
+          "workflow": "isolate drums, slice 2 bars"
+        },
+        {
+          "id": "bb-dilla-drunk",
+          "name": "Drunk swing",
+          "prompt": "neo soul hip hop drums, 88 bpm, unquantised loose drunk groove, laid back snare behind the beat, soft warm kick, brushed ghost notes, tape saturation, humanised timing, drums only, no bass, no melody",
+          "bpm": 88,
+          "duration": 60,
+          "workflow": "isolate drums; do NOT quantise — the timing is the point"
+        },
+        {
+          "id": "bb-jazzy-brush",
+          "name": "Jazzy brushed kit",
+          "prompt": "jazz rap drums, 94 bpm, brushed snare, soft ride cymbal, light kick, upright jazz drum kit, warm 1960s recording, subtle swing, drums and cymbals only, no piano, no bass",
+          "bpm": 94,
+          "duration": 60,
+          "workflow": "isolate drums, slice 4 bars"
+        },
+        {
+          "id": "bb-filtered-lo",
+          "name": "Heavily filtered",
+          "prompt": "boom bap drums, 86 bpm, low pass filtered drum break, muffled dark kit, dull thumping kick, soft dusty snare, hats barely audible, heavy vinyl noise, lo-fi sampler, drums only",
+          "bpm": 86,
+          "duration": 45,
+          "workflow": "isolate drums, slice 2 bars"
+        }
+      ]
+    },
+    {
+      "id": "drums-lofi",
+      "name": "Lo-fi drums",
+      "note": "Softer, slower, more tape character. These sit under jazz chords rather than carrying a track.",
+      "presets": [
+        {
+          "id": "lofi-sleepy",
+          "name": "Sleepy tape kit",
+          "prompt": "lo-fi hip hop drums, 78 bpm, soft dusty kit, muffled kick, brushed snare with tape wobble, quiet shaker, vinyl crackle, warm cassette saturation, gentle swing, drums only, no chords",
+          "bpm": 78,
+          "duration": 60,
+          "workflow": "isolate drums, slice 4 bars"
+        },
+        {
+          "id": "lofi-crisp",
+          "name": "Crisp lo-fi",
+          "prompt": "lo-fi hip hop drums, 84 bpm, clean tight kit, short snappy snare, closed hats sixteenths, light sidechain pump, subtle vinyl noise, modern lo-fi production, drums only, no melody",
+          "bpm": 84,
+          "duration": 60,
+          "workflow": "isolate drums, slice 4 bars"
+        },
+        {
+          "id": "lofi-halftime",
+          "name": "Halftime lo-fi",
+          "prompt": "lo-fi hip hop drums, 70 bpm, halftime feel, deep soft kick, wide lazy snare on three, sparse hats, heavy room reverb, tape hiss, drums only",
+          "bpm": 70,
+          "duration": 60,
+          "workflow": "isolate drums, slice 2 bars"
+        }
+      ]
+    },
+    {
+      "id": "drums-trap",
+      "name": "Trap and drill drums",
+      "note": "Write the fast tempo, not the halftime one — 140 bpm, not 70. ACE-Step responds to the literal number and you want the hats subdividing correctly.",
+      "presets": [
+        {
+          "id": "trap-modern",
+          "name": "Modern trap kit",
+          "prompt": "trap drums, 140 bpm, deep distorted 808 sub bass, tight layered clap and snare on the three, rapid triplet hi-hat rolls, open hat accents, sparse arrangement, heavy sub weight, clean modern mix, drums and 808 only, no melody",
+          "bpm": 140,
+          "duration": 60,
+          "workflow": "isolate drums and bass separately, slice 4 bars"
+        },
+        {
+          "id": "trap-dark",
+          "name": "Dark trap",
+          "prompt": "dark trap drums, 144 bpm, booming detuned 808, crisp rimshot, stuttering sixteenth and thirty-second hi-hats, sparse ominous space, tape distortion on the low end, percussion only, no instruments",
+          "bpm": 144,
+          "duration": 60,
+          "workflow": "isolate drums, slice 4 bars"
+        },
+        {
+          "id": "drill-uk",
+          "name": "UK drill",
+          "prompt": "uk drill drums, 142 bpm, sliding glide 808 bass, syncopated snare on the three and off-beat, skittering hi-hat patterns with triplet fills, dark sparse percussion, punchy tight kick, drums and sliding bass only",
+          "bpm": 142,
+          "duration": 60,
+          "workflow": "isolate bass stem for the 808 slides"
+        },
+        {
+          "id": "memphis-gritty",
+          "name": "Memphis grit",
+          "prompt": "memphis rap drums, 138 bpm, crude distorted drum machine, overdriven kick, thin harsh snare, simple hat pattern, heavily saturated and clipped, cassette generation loss, drums only, no melody",
+          "bpm": 138,
+          "duration": 45,
+          "workflow": "isolate drums, slice 2 bars"
+        }
+      ]
+    },
+    {
+      "id": "drums-funk",
+      "name": "Funk and west coast drums",
+      "note": "Live-feel kits. Useful when you want something to chop rather than something already arranged.",
+      "presets": [
+        {
+          "id": "funk-break",
+          "name": "Raw funk break",
+          "prompt": "1970s funk drum break, 96 bpm, live acoustic kit, open room microphones, syncopated ghost notes, ringing snare, tight kick, tambourine, analogue tape recording, drum break solo, no other instruments",
+          "bpm": 96,
+          "duration": 45,
+          "workflow": "isolate drums, slice 2 bars — this is what you chop"
+        },
+        {
+          "id": "gfunk",
+          "name": "G-funk groove",
+          "prompt": "west coast g-funk drums, 94 bpm, crisp punchy kit, tight snare with short decay, shaker and tambourine, laid back groove, clean 1990s production, drums and percussion only",
+          "bpm": 94,
+          "duration": 60,
+          "workflow": "isolate drums, slice 4 bars"
+        },
+        {
+          "id": "soul-break",
+          "name": "Soul drummer",
+          "prompt": "1960s soul drum break, 100 bpm, dry vintage kit, cracking snare, simple driving pattern, mono recording, slight tape compression, drums only, no horns, no bass",
+          "bpm": 100,
+          "duration": 45,
+          "workflow": "isolate drums, slice 2 bars"
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "name": "Keys and chords",
+      "note": "The best category for transcribing to MIDI afterwards — monophonic-ish lines and slow chords transcribe far better than dense arrangements.",
+      "presets": [
+        {
+          "id": "rhodes-jazzy",
+          "name": "Rhodes seventh chords",
+          "prompt": "solo fender rhodes electric piano, 88 bpm, F minor, lush jazzy seventh and ninth chords, slow warm progression, gentle tremolo, tape saturation, close mic, no drums, no bass, no other instruments",
+          "bpm": 88,
+          "key": "F minor",
+          "duration": 60,
+          "workflow": "transcribe to MIDI, replay with your own Rhodes"
+        },
+        {
+          "id": "dusty-piano",
+          "name": "Dusty upright piano",
+          "prompt": "solo upright piano, 90 bpm, D minor, sparse melancholy chord progression, felt dampened hammers, slightly detuned, vinyl crackle, close intimate recording, no drums, no bass",
+          "bpm": 90,
+          "key": "D minor",
+          "duration": 60,
+          "workflow": "transcribe to MIDI; slice the best 4 bars"
+        },
+        {
+          "id": "wurli-soul",
+          "name": "Wurlitzer soul",
+          "prompt": "solo wurlitzer electric piano, 92 bpm, B flat major, warm soulful chords with gentle overdrive, 1970s recording, spring reverb, no drums, no bass, no vocals",
+          "bpm": 92,
+          "key": "B flat major",
+          "duration": 60,
+          "workflow": "transcribe to MIDI"
+        },
+        {
+          "id": "organ-gospel",
+          "name": "Hammond organ",
+          "prompt": "solo hammond organ, 86 bpm, E flat major, gospel chord voicings, slow leslie rotation, drawbar warmth, tube amplifier saturation, no drums, no bass",
+          "bpm": 86,
+          "key": "E flat major",
+          "duration": 60,
+          "workflow": "slice 4 bars; transcription is rough on organ"
+        },
+        {
+          "id": "drill-piano",
+          "name": "Dark drill piano",
+          "prompt": "solo dark piano, 142 bpm, C sharp minor, sparse ominous single note melody, wide reverb tail, cold classical tone, minor key tension, no drums, no bass, no other instruments",
+          "bpm": 142,
+          "key": "C# minor",
+          "duration": 45,
+          "workflow": "transcribe to MIDI — monophonic lines come out cleanest"
+        },
+        {
+          "id": "celeste-bells",
+          "name": "Celeste and bells",
+          "prompt": "solo celesta and glockenspiel, 80 bpm, A minor, simple delicate music box melody, sparse notes, long decay, slight detune, dreamy reverb, no drums, no bass",
+          "bpm": 80,
+          "key": "A minor",
+          "duration": 45,
+          "workflow": "transcribe to MIDI"
+        }
+      ]
+    },
+    {
+      "id": "strings-brass",
+      "name": "Strings, brass and woodwind",
+      "note": "The classic sample-flip sources. Generate long, find the one bar that sounds like a record.",
+      "presets": [
+        {
+          "id": "soul-strings",
+          "name": "Soul strings",
+          "prompt": "1970s soul string section, 90 bpm, G minor, lush cinematic violins and cellos, sweeping legato phrase, warm analogue tape recording, slight wow and flutter, orchestral, no drums, no bass, no vocals",
+          "bpm": 90,
+          "key": "G minor",
+          "duration": 60,
+          "workflow": "slice 1-2 bars, pitch down, filter"
+        },
+        {
+          "id": "brass-stabs",
+          "name": "Funk brass stabs",
+          "prompt": "funk horn section, 96 bpm, E flat, punchy syncopated trumpet and saxophone stabs, tight brass hits, 1970s soul recording, bright and forward, no drums, no bass, no vocals",
+          "bpm": 96,
+          "key": "E flat major",
+          "duration": 45,
+          "workflow": "slice individual stabs as one-shots"
+        },
+        {
+          "id": "jazz-flute",
+          "name": "Jazz flute line",
+          "prompt": "solo jazz flute, 88 bpm, C minor, breathy improvised melodic phrase, warm 1970s recording, light room reverb, single instrument, no drums, no bass, no piano",
+          "bpm": 88,
+          "key": "C minor",
+          "duration": 45,
+          "workflow": "transcribe to MIDI — flute is the best case for monophonic tracking"
+        },
+        {
+          "id": "sax-noir",
+          "name": "Noir saxophone",
+          "prompt": "solo tenor saxophone, 84 bpm, B flat minor, slow smoky melodic line, breathy tone, distant room reverb, late night jazz club, no drums, no bass, no piano",
+          "bpm": 84,
+          "key": "B flat minor",
+          "duration": 45,
+          "workflow": "transcribe to MIDI"
+        },
+        {
+          "id": "drill-strings",
+          "name": "Drill string ostinato",
+          "prompt": "dark orchestral strings, 142 bpm, F sharp minor, tense repeating staccato violin ostinato, low cello drone, cinematic menace, sparse, no drums, no bass, no percussion",
+          "bpm": 142,
+          "key": "F# minor",
+          "duration": 45,
+          "workflow": "slice 2 bars, layer under drill drums"
+        },
+        {
+          "id": "harp-sweep",
+          "name": "Harp figure",
+          "prompt": "solo concert harp, 76 bpm, D major, cascading arpeggio figure, glissando sweeps, bright resonant plucks, natural hall reverb, single instrument, no drums, no bass",
+          "bpm": 76,
+          "key": "D major",
+          "duration": 40,
+          "workflow": "slice sweeps as transitions and fills"
+        }
+      ]
+    },
+    {
+      "id": "bass",
+      "name": "Bass",
+      "note": "Generate alone rather than isolating from a mix — separated bass has artefacts that show badly when you pitch it. Transcribes to MIDI reliably.",
+      "presets": [
+        {
+          "id": "upright-walk",
+          "name": "Upright walking bass",
+          "prompt": "solo upright double bass, 92 bpm, F minor, walking jazz bass line, warm woody fingered tone, subtle string buzz, close mic 1960s recording, single instrument, no drums, no piano",
+          "bpm": 92,
+          "key": "F minor",
+          "duration": 60,
+          "workflow": "transcribe to MIDI — pitch tracking is exact down to C1"
+        },
+        {
+          "id": "moog-sub",
+          "name": "Moog sub bass",
+          "prompt": "solo moog analogue synth bass, 94 bpm, C minor, fat round sub bass line, slight portamento glide, low pass filtered, warm analogue saturation, single instrument, no drums, no melody",
+          "bpm": 94,
+          "key": "C minor",
+          "duration": 45,
+          "workflow": "transcribe to MIDI, replay through your own synth"
+        },
+        {
+          "id": "808-slide",
+          "name": "808 slides",
+          "prompt": "solo 808 sub bass, 142 bpm, G minor, long sliding glide notes between pitches, distorted saturated low end, long decay tails, single instrument, no drums, no hats, no melody",
+          "bpm": 142,
+          "key": "G minor",
+          "duration": 45,
+          "workflow": "slice; MIDI will miss the glides — redraw pitch bends"
+        },
+        {
+          "id": "electric-funk",
+          "name": "Fingered electric bass",
+          "prompt": "solo electric bass guitar, 96 bpm, E minor, syncopated funk bass line, fingered round tone, light compression, 1970s recording, single instrument, no drums, no guitar",
+          "bpm": 96,
+          "key": "E minor",
+          "duration": 60,
+          "workflow": "transcribe to MIDI"
+        }
+      ]
+    },
+    {
+      "id": "guitar-texture",
+      "name": "Guitar and texture",
+      "presets": [
+        {
+          "id": "nylon-loop",
+          "name": "Nylon guitar figure",
+          "prompt": "solo nylon string acoustic guitar, 86 bpm, A minor, gentle fingerpicked repeating figure, warm intimate close recording, slight fret noise, single instrument, no drums, no bass, no vocals",
+          "bpm": 86,
+          "key": "A minor",
+          "duration": 60,
+          "workflow": "slice 4 bars"
+        },
+        {
+          "id": "jazz-guitar",
+          "name": "Hollow-body jazz guitar",
+          "prompt": "solo hollow body electric jazz guitar, 90 bpm, D minor, mellow chord melody with seventh voicings, warm clean tube amplifier, spring reverb, 1960s recording, no drums, no bass",
+          "bpm": 90,
+          "key": "D minor",
+          "duration": 60,
+          "workflow": "slice 2-4 bars"
+        },
+        {
+          "id": "psych-guitar",
+          "name": "Psych fuzz guitar",
+          "prompt": "solo electric guitar, 98 bpm, E minor, fuzzy psychedelic riff, heavy tremolo and spring reverb, 1960s garage recording, tape saturation, single instrument, no drums, no bass",
+          "bpm": 98,
+          "key": "E minor",
+          "duration": 45,
+          "workflow": "slice; pitch down for weight"
+        },
+        {
+          "id": "vibraphone",
+          "name": "Vibraphone",
+          "prompt": "solo vibraphone, 84 bpm, B flat major, soft mallet melody with motor tremolo, jazzy extended chords, warm resonant tone, natural room, single instrument, no drums, no bass",
+          "bpm": 84,
+          "key": "B flat major",
+          "duration": 45,
+          "workflow": "transcribe to MIDI"
+        }
+      ]
+    },
+    {
+      "id": "percussion",
+      "name": "Percussion and one-shots",
+      "note": "One-shots are the hardest thing to get from a song model. Generate a repeating pattern of one instrument and slice single hits out of it.",
+      "presets": [
+        {
+          "id": "perc-layer",
+          "name": "Percussion layer",
+          "prompt": "hand percussion loop, 92 bpm, congas bongos shaker and tambourine, dry close recording, syncopated latin pattern, no kick, no snare, no melody, percussion only",
+          "bpm": 92,
+          "duration": 45,
+          "workflow": "layer over a drum loop for movement"
+        },
+        {
+          "id": "oneshot-kicks",
+          "name": "Kick one-shots",
+          "prompt": "solo bass drum, 80 bpm, single isolated kick drum hits with long gaps of silence, deep punchy tone, dry close mic, no snare, no hats, no melody, no other instruments",
+          "bpm": 80,
+          "duration": 30,
+          "workflow": "slice individual hits; expect to salvage 2-3 usable ones"
+        },
+        {
+          "id": "oneshot-snares",
+          "name": "Snare one-shots",
+          "prompt": "solo snare drum, 80 bpm, single isolated snare hits with silence between, cracking rimshot tone, short room decay, vintage kit, no kick, no hats, no melody",
+          "bpm": 80,
+          "duration": 30,
+          "workflow": "slice individual hits"
+        },
+        {
+          "id": "oneshot-hats",
+          "name": "Hi-hat one-shots",
+          "prompt": "solo hi-hat cymbal, 80 bpm, isolated closed and open hi-hat hits, crisp bright metallic tone, dry close recording, no kick, no snare, no melody",
+          "bpm": 80,
+          "duration": 30,
+          "workflow": "slice individual hits"
+        },
+        {
+          "id": "vinyl-texture",
+          "name": "Vinyl texture bed",
+          "prompt": "vinyl record surface noise, 90 bpm, crackle hiss and pops, dusty needle on empty groove, warm analogue noise floor, no music, no drums, no melody",
+          "bpm": 90,
+          "duration": 40,
+          "workflow": "loop under everything at low level"
+        }
+      ]
+    },
+    {
+      "id": "full-beat",
+      "name": "Full beats",
+      "note": "When you want a whole arrangement to separate into stems rather than a single loop. This is where ACE-Step is actually on home ground.",
+      "presets": [
+        {
+          "id": "beat-boom-bap",
+          "name": "Boom bap beat",
+          "prompt": "boom bap hip hop instrumental, 92 bpm, F minor, dusty sampled drum break, filtered soul sample chop, upright bass line, sparse rhodes stabs, vinyl crackle, 1990s east coast production, narrow dry mix, instrumental",
+          "bpm": 92,
+          "key": "F minor",
+          "duration": 120,
+          "workflow": "separate stems, then transcribe the melodic ones to MIDI"
+        },
+        {
+          "id": "beat-lofi",
+          "name": "Lo-fi beat",
+          "prompt": "lo-fi hip hop instrumental, 80 bpm, C major, soft dusty drums, jazzy rhodes seventh chords, warm upright bass, tape wobble, vinyl crackle, mellow late night mood, instrumental",
+          "bpm": 80,
+          "key": "C major",
+          "duration": 120,
+          "workflow": "separate stems"
+        },
+        {
+          "id": "beat-drill",
+          "name": "Drill beat",
+          "prompt": "uk drill instrumental, 142 bpm, F sharp minor, sliding 808 bass, skittering hi-hats, snare on the three, dark staccato string ostinato, sparse ominous arrangement, modern clean mix, instrumental",
+          "bpm": 142,
+          "key": "F# minor",
+          "duration": 120,
+          "workflow": "separate stems"
+        }
+      ]
+    }
+  ]
+}

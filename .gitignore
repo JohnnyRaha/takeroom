@@ -1,0 +1,38 @@
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Library, renders, stems and logs (keep your music out of the repo)
+data/
+logs/
+*.log
+*.wav
+*.mp3
+*.flac
+*.aiff
+*.m4a
+*.mid
+*.db
+*.sqlite
+*.sqlite3*
+
+# Model weights and checkpoints
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.gguf
+
+# Secrets and local settings
+.env
+*.key
+
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
