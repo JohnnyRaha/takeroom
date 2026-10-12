@@ -13,6 +13,10 @@ brief ──► writer ──► generator ──► mastering ──► library
                      on MLX        limiter)
 ```
 
+![Takeroom interface](docs/screenshot.png)
+
+*The interface with two takes in the session, running on the built-in mock backend.*
+
 ## What this is and isn't
 
 It is the orchestration layer — the part that makes a raw model feel like a
